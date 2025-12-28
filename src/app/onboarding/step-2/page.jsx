@@ -45,7 +45,7 @@ export default function PersonalizationStep() {
             Let's personalize your plan.
           </h1>
           <p className="text-gray-600 dark:text-gray-400 text-base mt-2">
-            Select your primary goals and budget preference to get started.
+            Select your primary goals and budget preference to begin.
           </p>
         </div>
 

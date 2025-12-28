@@ -68,6 +68,23 @@
   font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
 
+/* Bottom navigation styles */
+.bottom-nav {
+  backdrop-filter: blur(6px);
+}
+.bottom-nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+.bottom-nav a:hover {
+  color: var(--color-primary);
+}
+
+
 .bg-background { background-color: var(--color-background); }
 .bg-background-light { background-color: var(--color-background-light); }
 .text-foreground { color: var(--color-foreground); }

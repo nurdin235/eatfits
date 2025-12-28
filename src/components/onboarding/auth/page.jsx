@@ -72,8 +72,8 @@ export default function AuthPage() {
 
       {/* Sticky Footer */}
       <div className="p-6 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 sticky bottom-0">
-        <button onClick={handleAction} aria-label={isLogin ? "Login" : "Get Started"} className="btn-cta flex items-center justify-center gap-2">
-          <span className="text-sm font-semibold">{isLogin ? "Login" : "Get Started"}</span>
+        <button onClick={handleAction} aria-label={isLogin ? "Login" : "Continue"} className="btn-cta flex items-center justify-center gap-2">
+          <span className="text-sm font-semibold">{isLogin ? "Login" : "Continue"}</span>
           <span className="material-symbols-outlined text-xl text-white" aria-hidden="true">arrow_forward</span>
         </button>
       </div>
