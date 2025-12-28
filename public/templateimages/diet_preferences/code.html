@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EatFit - Diet Preferences</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6a8d4e",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#191c16",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#23261f",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Hide scrollbar for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 min-h-screen flex flex-col antialiased font-display">
+<!-- Top Navigation Area -->
+<header class="flex-none px-4 pt-6 pb-2">
+<div class="flex items-center justify-between mb-6">
+<button class="flex items-center justify-center w-10 h-10 rounded-full hover:bg-gray-200 dark:hover:bg-gray-800 transition-colors text-gray-900 dark:text-gray-100">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<div class="text-sm font-medium text-gray-500 dark:text-gray-400">Skip</div>
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-end">
+<p class="text-primary font-semibold text-sm tracking-wide uppercase">Step 2 of 5</p>
+</div>
+<div class="h-2 w-full bg-gray-200 dark:bg-gray-800 rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[40%] rounded-full"></div>
+</div>
+</div>
+</header>
+<!-- Scrollable Content Area -->
+<main class="flex-1 overflow-y-auto no-scrollbar px-4 pb-24">
+<!-- Headlines -->
+<div class="py-6">
+<h1 class="text-3xl font-bold text-gray-900 dark:text-white leading-tight mb-2">What is your diet?</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base leading-relaxed">Choose the plan that fits your lifestyle best. You can change this later.</p>
+</div>
+<!-- Diet Selection Grid -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<!-- Card: Balanced (Selected) -->
+<div class="relative group cursor-pointer">
+<div class="absolute -inset-0.5 bg-primary rounded-xl opacity-100 blur-[1px]"></div>
+<div class="relative flex flex-col items-center justify-center gap-3 rounded-xl bg-surface-light dark:bg-surface-dark border-2 border-primary p-5 h-36 shadow-sm">
+<div class="bg-primary/10 p-3 rounded-full text-primary">
+<span class="material-symbols-outlined text-3xl">scale</span>
+</div>
+<h2 class="text-primary font-bold text-base">Balanced</h2>
+<!-- Checkmark Badge -->
+<div class="absolute top-3 right-3 text-primary">
+<span class="material-symbols-outlined text-xl">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Card: Vegetarian -->
+<div class="relative group cursor-pointer">
+<div class="relative flex flex-col items-center justify-center gap-3 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-5 h-36 shadow-sm hover:border-primary/50 transition-all">
+<div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-full text-gray-600 dark:text-gray-300 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">spa</span>
+</div>
+<h2 class="text-gray-900 dark:text-white font-bold text-base">Vegetarian</h2>
+</div>
+</div>
+<!-- Card: Vegan -->
+<div class="relative group cursor-pointer">
+<div class="relative flex flex-col items-center justify-center gap-3 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-5 h-36 shadow-sm hover:border-primary/50 transition-all">
+<div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-full text-gray-600 dark:text-gray-300 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h2 class="text-gray-900 dark:text-white font-bold text-base">Vegan</h2>
+</div>
+</div>
+<!-- Card: Custom -->
+<div class="relative group cursor-pointer">
+<div class="relative flex flex-col items-center justify-center gap-3 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 p-5 h-36 shadow-sm hover:border-primary/50 transition-all">
+<div class="bg-gray-100 dark:bg-gray-800 p-3 rounded-full text-gray-600 dark:text-gray-300 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-3xl">tune</span>
+</div>
+<h2 class="text-gray-900 dark:text-white font-bold text-base">Custom</h2>
+</div>
+</div>
+</div>
+<!-- Exclusions Section -->
+<div class="mb-6">
+<h3 class="text-lg font-bold text-gray-900 dark:text-white mb-4">Dietary Exclusions</h3>
+<div class="flex flex-col gap-3">
+<!-- Toggle Item: Pork -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500">kebab_dining</span>
+<span class="text-base font-medium text-gray-900 dark:text-white">No Pork</span>
+</div>
+<label class="inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item: Dairy -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500">water_drop</span>
+<span class="text-base font-medium text-gray-900 dark:text-white">Dairy Free</span>
+</div>
+<label class="inline-flex items-center cursor-pointer">
+<input checked="" class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+<!-- Toggle Item: Gluten -->
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-100 dark:border-gray-800 shadow-sm">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-gray-500">grass</span>
+<span class="text-base font-medium text-gray-900 dark:text-white">Gluten Free</span>
+</div>
+<label class="inline-flex items-center cursor-pointer">
+<input class="sr-only peer" type="checkbox" value=""/>
+<div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-primary"></div>
+</label>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Action -->
+<footer class="fixed bottom-0 left-0 w-full bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-t border-gray-200 dark:border-gray-800 p-4 pb-8 z-10">
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-bold text-lg py-4 rounded-xl shadow-lg transition-transform active:scale-[0.98] flex items-center justify-center gap-2">
+            Next Step
+            <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</footer>
+</body></html>

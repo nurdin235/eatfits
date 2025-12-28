@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EatFit - Create Account</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6a8d4e",
+                        "primary-dark": "#56733e",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#191c16",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#242820",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "2xl": "1rem", "full": "9999px"},
+                    boxShadow: {
+                        'soft': '0 4px 20px -2px rgba(0, 0, 0, 0.05)',
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Hide scrollbar for cleaner mobile look */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+        .filled-icon {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-gray-900 dark:text-gray-100 min-h-screen flex justify-center">
+<!-- Mobile Screen Wrapper -->
+<div class="relative flex h-full min-h-screen w-full max-w-[480px] flex-col bg-background-light dark:bg-background-dark overflow-x-hidden shadow-2xl">
+<!-- Top Nav -->
+<div class="flex items-center p-4 pb-2 justify-between bg-background-light dark:bg-background-dark z-10 sticky top-0">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-surface-dark transition-colors text-gray-800 dark:text-gray-200">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<div class="flex items-center gap-1">
+<!-- Steps indicator text is in the progress bar section below as per design plan -->
+</div>
+<div class="size-10"></div> <!-- Spacer for centering if needed -->
+</div>
+<!-- Progress Bar -->
+<div class="flex flex-col gap-3 px-6 pt-2 pb-4">
+<div class="flex justify-between items-center">
+<p class="text-primary dark:text-primary font-medium text-sm tracking-wide uppercase">Step 1 of 4</p>
+<p class="text-gray-400 text-xs font-medium">25% Completed</p>
+</div>
+<div class="rounded-full bg-gray-200 dark:bg-gray-700 h-1.5 overflow-hidden">
+<div class="h-full rounded-full bg-primary" style="width: 25%;"></div>
+</div>
+</div>
+<!-- Main Content Scrollable Area -->
+<div class="flex-1 overflow-y-auto px-6 pb-24">
+<!-- Headline -->
+<div class="pb-6 pt-2">
+<h1 class="text-gray-900 dark:text-white tracking-tight text-[32px] font-bold leading-tight mb-3">Create your profile</h1>
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-relaxed">
+                    Join EatFit to start your journey towards healthier eating and personalized meal plans.
+                </p>
+</div>
+<!-- Form -->
+<form class="flex flex-col gap-5">
+<!-- Full Name -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-gray-200 text-sm font-semibold leading-normal ml-1" for="fullname">Full Name</label>
+<div class="relative">
+<input class="form-input flex w-full rounded-xl text-gray-900 dark:text-white border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-600 px-4 text-base transition-all shadow-sm" id="fullname" placeholder="Jane Doe" type="text"/>
+</div>
+</div>
+<!-- Email -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-gray-200 text-sm font-semibold leading-normal ml-1" for="email">Email Address</label>
+<div class="relative group">
+<input class="form-input flex w-full rounded-xl text-gray-900 dark:text-white border-primary border dark:border-primary bg-surface-light dark:bg-surface-dark focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-600 px-4 pr-12 text-base transition-all shadow-sm" id="email" placeholder="jane@example.com" type="email" value="jane@example.com"/>
+<!-- Validation Success Icon -->
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-primary pointer-events-none flex items-center">
+<span class="material-symbols-outlined filled-icon">check_circle</span>
+</div>
+</div>
+</div>
+<!-- Password -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-gray-200 text-sm font-semibold leading-normal ml-1" for="password">Password</label>
+<div class="relative">
+<input class="form-input flex w-full rounded-xl text-gray-900 dark:text-white border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-600 px-4 pr-12 text-base transition-all shadow-sm" id="password" placeholder="Min. 8 characters" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors flex items-center" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="flex flex-col gap-1.5">
+<label class="text-gray-900 dark:text-gray-200 text-sm font-semibold leading-normal ml-1" for="confirm_password">Confirm Password</label>
+<div class="relative">
+<input class="form-input flex w-full rounded-xl text-gray-900 dark:text-white border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-600 px-4 pr-12 text-base transition-all shadow-sm" id="confirm_password" placeholder="Re-enter password" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors flex items-center" type="button">
+<span class="material-symbols-outlined">visibility_off</span>
+</button>
+</div>
+</div>
+</form>
+<!-- Social Login Divider -->
+<div class="flex items-center gap-4 my-8 px-2">
+<div class="h-px bg-gray-200 dark:bg-gray-700 flex-1"></div>
+<p class="text-gray-400 text-sm font-medium">Or continue with</p>
+<div class="h-px bg-gray-200 dark:bg-gray-700 flex-1"></div>
+</div>
+<!-- Social Buttons -->
+<div class="flex gap-4 mb-6">
+<button class="flex-1 h-12 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 shadow-sm">
+<!-- Google Logo Placeholder -->
+<svg class="w-5 h-5" fill="none" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M23.766 12.2764C23.766 11.4607 23.6999 10.6406 23.5588 9.83807H12.24V14.4591H18.7217C18.4528 15.9494 17.5885 17.2678 16.323 18.1056V21.1039H20.19C22.4608 19.0139 23.766 15.9274 23.766 12.2764Z" fill="#4285F4"></path>
+<path d="M12.2401 24.0008C15.4766 24.0008 18.2059 22.9382 20.1945 21.1039L16.3275 18.1055C15.2517 18.8375 13.8627 19.252 12.2445 19.252C9.11388 19.252 6.45946 17.1399 5.50705 14.3003H1.5166V17.3912C3.55371 21.4434 7.7029 24.0008 12.2401 24.0008Z" fill="#34A853"></path>
+<path d="M5.50253 14.3003C5.00236 12.8199 5.00236 11.1799 5.50253 9.69951V6.60861H1.51649C-0.18551 10.0056 -0.18551 13.9945 1.51649 17.3915L5.50253 14.3003Z" fill="#FBBC05"></path>
+<path d="M12.2401 4.74966C13.9509 4.7232 15.6044 5.36697 16.8434 6.54867L20.2695 3.12262C18.1001 1.0855 15.2208 -0.0344664 12.2401 0.000808666C7.7029 0.000808666 3.55371 2.55822 1.5166 6.60861L5.50264 9.69951C6.45064 6.85991 9.10947 4.74966 12.2401 4.74966Z" fill="#EA4335"></path>
+</svg>
+<span class="text-gray-700 dark:text-gray-200 font-medium text-sm">Google</span>
+</button>
+<button class="flex-1 h-12 rounded-xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors flex items-center justify-center gap-3 shadow-sm">
+<!-- Apple Logo Placeholder -->
+<svg class="w-5 h-5 text-gray-900 dark:text-white" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.6046 10.1507C16.5815 12.6074 18.6657 13.993 18.7499 14.0372C18.7309 14.1032 18.3377 15.4674 17.3821 16.8837C16.5529 18.1039 15.6888 19.3333 14.3006 19.3621C12.9345 19.3908 12.4939 18.5367 10.8984 18.5367C9.29864 18.5367 8.81079 19.3375 7.49126 19.3908C6.16937 19.4442 5.19579 18.067 4.36329 16.8509C2.65997 14.3644 1.36536 9.82479 3.11674 6.74609C3.98711 5.21588 5.54139 4.2462 7.27627 4.20926C8.59817 4.18053 9.84594 5.11736 10.6559 5.11736C11.4659 5.11736 12.9861 4.02047 14.5673 4.17643C15.2281 4.20516 17.0869 4.41857 18.2714 6.18784C18.1639 6.2535 16.6341 7.16892 16.6046 10.1507ZM12.7552 2.76618C13.4739 1.88378 13.9566 0.65414 13.8217 0C12.6477 0.0492477 11.2314 0.797782 10.3953 1.814C9.64696 2.71694 9.10214 4.00816 9.25599 5.20764C10.5627 5.30614 11.9163 4.54267 12.7552 2.76618Z"></path>
+</svg>
+<span class="text-gray-700 dark:text-gray-200 font-medium text-sm">Apple</span>
+</button>
+</div>
+<!-- Login Link -->
+<div class="text-center pb-8">
+<p class="text-sm text-gray-500 font-normal">
+                    Already have an account? 
+                    <a class="text-primary font-semibold hover:underline" href="#">Log in</a>
+</p>
+</div>
+</div>
+<!-- Sticky Footer Action -->
+<div class="p-6 bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 z-10 sticky bottom-0">
+<button class="w-full h-14 bg-primary hover:bg-primary-dark transition-colors rounded-xl text-white font-semibold text-lg shadow-lg shadow-primary/30 flex items-center justify-center gap-2">
+                Next Step
+                <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

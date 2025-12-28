@@ -1,0 +1,31 @@
+:root {
+  /* EatFit Warm Earth Palette */
+  --color-background: #fefae0;
+  --color-background-light: #fbf7e6;
+  --color-foreground: #283618;
+  --color-primary: #606c38;
+  --color-accent: #dda15e;
+  --color-cta: #bc6c25;
+  --color-cta-rgb: 188,108,37;
+  --color-dark: #283618;
+
+  /* Surface tokens used across components */
+  --surface-light: #ffffff;
+  --surface-dark: #0f1720; /* dark surface for contrast in dark mode */
+
+  /* RGB helpers */
+  --color-primary-rgb: 96,108,56;
+  --color-dark-rgb: 40,54,24;
+  --color-accent-rgb: 221,161,94;
+
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Inter", sans-serif;
+
+  /* Radius Tokens */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  
+  /* Custom Shadow for the Bowl */
+  --shadow-bowl: 0 20px 50px -12px rgba(40, 54, 24, 0.15);
+}

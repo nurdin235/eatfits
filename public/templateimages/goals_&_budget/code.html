@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EatFit - Goals &amp; Budget</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6a8d4e",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#191c16",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar hide for cleaner mobile look */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill-1 {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-[#141712] dark:text-white font-display overflow-hidden selection:bg-primary selection:text-white">
+<!-- Mobile Container -->
+<div class="relative flex h-full min-h-screen w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl group/design-root overflow-hidden">
+<!-- Sticky Header Area -->
+<div class="shrink-0 bg-background-light dark:bg-background-dark z-20">
+<!-- TopAppBar -->
+<div class="flex items-center p-4 pb-2 justify-between">
+<button class="flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-gray-200 dark:hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-2xl dark:text-white">arrow_back</span>
+</button>
+<div class="text-sm font-semibold text-gray-500 dark:text-gray-400">Step 2 of 4</div>
+<div class="w-10"></div> <!-- Spacer for balance -->
+</div>
+<!-- ProgressBar -->
+<div class="flex flex-col gap-3 px-4 pb-2">
+<div class="h-1.5 w-full rounded-full bg-[#dbe0d7] dark:bg-neutral-800 overflow-hidden">
+<div class="h-full rounded-full bg-primary transition-all duration-500 ease-out" style="width: 50%;"></div>
+</div>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar pb-32">
+<!-- HeadlineText -->
+<div class="px-4 pt-4 pb-2">
+<h2 class="text-[#141712] dark:text-white tracking-tight text-[28px] font-bold leading-tight">Let's personalize your plan.</h2>
+</div>
+<!-- BodyText -->
+<div class="px-4 pb-6">
+<p class="text-gray-600 dark:text-gray-400 text-base font-normal leading-normal">Select your primary goals and budget preference to get started.</p>
+</div>
+<!-- Goals Section -->
+<div class="px-4 mb-8">
+<h2 class="text-[#141712] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Primary Goals</h2>
+<div class="flex flex-col gap-3">
+<!-- Option 1: Weight Management (Selected State) -->
+<label class="relative flex cursor-pointer items-center gap-4 rounded-xl border-2 border-primary bg-primary/10 p-4 transition-all hover:bg-primary/15 dark:bg-primary/20">
+<input checked="" class="peer sr-only" type="checkbox"/>
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-white text-primary shadow-sm dark:bg-background-dark">
+<span class="material-symbols-outlined text-[24px]">monitor_weight</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-bold text-[#141712] dark:text-white text-base">Weight management</span>
+<span class="text-sm text-gray-600 dark:text-gray-300">Lose, gain, or maintain</span>
+</div>
+<div class="text-primary opacity-100 transition-opacity">
+<span class="material-symbols-outlined fill-1">check_circle</span>
+</div>
+</label>
+<!-- Option 2: Healthy Eating (Unselected State) -->
+<label class="relative flex cursor-pointer items-center gap-4 rounded-xl border-2 border-transparent bg-white p-4 shadow-sm transition-all hover:border-primary/30 hover:shadow-md dark:bg-neutral-800/50 dark:border-neutral-700">
+<input class="peer sr-only" type="checkbox"/>
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#f0f2ef] text-gray-600 dark:bg-neutral-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-[24px]">nutrition</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-bold text-[#141712] dark:text-white text-base">Healthy eating</span>
+<span class="text-sm text-gray-500 dark:text-gray-400">Improve overall nutrition</span>
+</div>
+<div class="text-primary opacity-0 peer-checked:opacity-100 transition-opacity absolute right-4">
+<span class="material-symbols-outlined fill-1">check_circle</span>
+</div>
+<!-- Border highlight logic via peer-checked sibling if needed, or simply toggle classes with JS in real app. For CSS only: -->
+<div class="absolute inset-0 rounded-xl border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity"></div>
+<div class="absolute inset-0 rounded-xl bg-primary/5 opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity dark:bg-primary/20"></div>
+</label>
+<!-- Option 3: Save Time (Unselected State) -->
+<label class="relative flex cursor-pointer items-center gap-4 rounded-xl border-2 border-transparent bg-white p-4 shadow-sm transition-all hover:border-primary/30 hover:shadow-md dark:bg-neutral-800/50 dark:border-neutral-700">
+<input class="peer sr-only" type="checkbox"/>
+<div class="flex size-12 shrink-0 items-center justify-center rounded-full bg-[#f0f2ef] text-gray-600 dark:bg-neutral-700 dark:text-gray-300">
+<span class="material-symbols-outlined text-[24px]">schedule</span>
+</div>
+<div class="flex flex-col flex-1">
+<span class="font-bold text-[#141712] dark:text-white text-base">Save time</span>
+<span class="text-sm text-gray-500 dark:text-gray-400">Quick &amp; easy recipes</span>
+</div>
+<div class="text-primary opacity-0 peer-checked:opacity-100 transition-opacity absolute right-4">
+<span class="material-symbols-outlined fill-1">check_circle</span>
+</div>
+<div class="absolute inset-0 rounded-xl border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity"></div>
+<div class="absolute inset-0 rounded-xl bg-primary/5 opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity dark:bg-primary/20"></div>
+</label>
+</div>
+</div>
+<!-- Budget Section -->
+<div class="px-4 mb-4">
+<h2 class="text-[#141712] dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] mb-4">Budget Preference</h2>
+<div class="grid grid-cols-3 gap-3">
+<!-- Low -->
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="flex flex-col items-center justify-center py-4 px-2 rounded-xl border-2 border-transparent bg-white shadow-sm transition-all hover:shadow-md dark:bg-neutral-800/50 dark:border-neutral-700 h-24">
+<span class="text-2xl font-bold text-gray-400 mb-1 group-hover:text-primary transition-colors">$</span>
+<span class="text-sm font-semibold text-gray-500 dark:text-gray-400">Low</span>
+</div>
+<!-- Active State Overlays -->
+<div class="absolute inset-0 rounded-xl border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity"></div>
+<div class="absolute inset-0 rounded-xl bg-primary/5 opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity dark:bg-primary/20"></div>
+<div class="absolute top-4 left-0 w-full text-center opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+<span class="text-2xl font-bold text-primary">$</span>
+</div>
+<div class="absolute bottom-4 left-0 w-full text-center opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+<span class="text-sm font-bold text-[#141712] dark:text-white">Low</span>
+</div>
+</label>
+<!-- Medium (Pre-selected) -->
+<label class="relative cursor-pointer group">
+<input checked="" class="peer sr-only" name="budget" type="radio"/>
+<div class="flex flex-col items-center justify-center py-4 px-2 rounded-xl border-2 border-transparent bg-white shadow-sm transition-all hover:shadow-md dark:bg-neutral-800/50 dark:border-neutral-700 h-24">
+<span class="text-2xl font-bold text-gray-400 mb-1 group-hover:text-primary transition-colors">$$</span>
+<span class="text-sm font-semibold text-gray-500 dark:text-gray-400">Medium</span>
+</div>
+<!-- Active State Overlays -->
+<div class="absolute inset-0 rounded-xl border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity"></div>
+<div class="absolute inset-0 rounded-xl bg-primary/5 opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity dark:bg-primary/20"></div>
+<div class="absolute top-4 left-0 w-full text-center opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+<span class="text-2xl font-bold text-primary">$$</span>
+</div>
+<div class="absolute bottom-4 left-0 w-full text-center opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+<span class="text-sm font-bold text-[#141712] dark:text-white">Medium</span>
+</div>
+</label>
+<!-- Flexible -->
+<label class="relative cursor-pointer group">
+<input class="peer sr-only" name="budget" type="radio"/>
+<div class="flex flex-col items-center justify-center py-4 px-2 rounded-xl border-2 border-transparent bg-white shadow-sm transition-all hover:shadow-md dark:bg-neutral-800/50 dark:border-neutral-700 h-24">
+<span class="text-2xl font-bold text-gray-400 mb-1 group-hover:text-primary transition-colors">$$$</span>
+<span class="text-sm font-semibold text-gray-500 dark:text-gray-400">Flexible</span>
+</div>
+<!-- Active State Overlays -->
+<div class="absolute inset-0 rounded-xl border-2 border-primary opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity"></div>
+<div class="absolute inset-0 rounded-xl bg-primary/5 opacity-0 peer-checked:opacity-100 pointer-events-none transition-opacity dark:bg-primary/20"></div>
+<div class="absolute top-4 left-0 w-full text-center opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+<span class="text-2xl font-bold text-primary">$$$</span>
+</div>
+<div class="absolute bottom-4 left-0 w-full text-center opacity-0 peer-checked:opacity-100 transition-opacity pointer-events-none">
+<span class="text-sm font-bold text-[#141712] dark:text-white">Flexible</span>
+</div>
+</label>
+</div>
+</div>
+</div>
+<!-- Sticky Footer CTA -->
+<div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pt-8 pb-6 px-4 z-10">
+<button class="w-full h-14 bg-primary rounded-xl flex items-center justify-center text-white text-base font-bold tracking-tight shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform">
+                Next Step
+            </button>
+</div>
+</div>
+</body></html>

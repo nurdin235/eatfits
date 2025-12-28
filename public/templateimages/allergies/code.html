@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Allergies - EatFit Onboarding</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Script -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#6a8d4e",
+                        "primary-dark": "#5a7d3e",
+                        "background-light": "#f7f7f6",
+                        "background-dark": "#191c16",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#252822",
+                        "text-main": "#141712",
+                        "text-secondary": "#718165",
+                        "border-light": "#e5e7eb",
+                        "border-dark": "#374151"
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    boxShadow: {
+                        "soft": "0 4px 20px -2px rgba(0, 0, 0, 0.05)",
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom checkbox styles to handle the card selection state */
+        .allergy-checkbox:checked + div {
+            border-color: #6a8d4e;
+            background-color: rgba(106, 141, 78, 0.08);
+        }
+        
+        .allergy-checkbox:checked + div .icon-container {
+            background-color: #6a8d4e;
+            color: white;
+        }
+
+        .allergy-checkbox:checked + div .check-indicator {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display antialiased text-text-main dark:text-gray-100 overflow-x-hidden selection:bg-primary selection:text-white">
+<!-- Navigation / Progress Header -->
+<header class="sticky top-0 z-20 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-sm transition-colors duration-300">
+<div class="flex w-full flex-row items-center justify-between px-6 py-4 max-w-lg mx-auto">
+<!-- Back Button -->
+<button aria-label="Go back" class="flex items-center justify-center h-10 w-10 rounded-full hover:bg-black/5 dark:hover:bg-white/10 transition-colors text-text-main dark:text-white">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<!-- Progress Indicators -->
+<div aria-valuemax="5" aria-valuemin="1" aria-valuenow="3" class="flex flex-row items-center justify-center gap-2" role="progressbar">
+<div class="h-2 w-2 rounded-full bg-[#dbe0d7] dark:bg-gray-700"></div>
+<div class="h-2 w-2 rounded-full bg-[#dbe0d7] dark:bg-gray-700"></div>
+<div class="h-2 w-8 rounded-full bg-primary transition-all duration-500 ease-out"></div> <!-- Current Step -->
+<div class="h-2 w-2 rounded-full bg-[#dbe0d7] dark:bg-gray-700"></div>
+<div class="h-2 w-2 rounded-full bg-[#dbe0d7] dark:bg-gray-700"></div>
+</div>
+<!-- Spacer for visual balance -->
+<div class="w-10"></div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col px-6 max-w-lg mx-auto w-full pb-32">
+<!-- Text Content -->
+<div class="mb-8 pt-2 animate-[fadeIn_0.6s_ease-out]">
+<h1 class="text-text-main dark:text-white tracking-tight text-[32px] font-bold leading-tight mb-3">
+                Do you have any food allergies?
+            </h1>
+<p class="text-text-secondary dark:text-gray-400 text-base font-normal leading-relaxed">
+                We will filter recipes to ensure your meals are safe and tailored to your needs.
+            </p>
+</div>
+<!-- Allergy Selection Grid -->
+<div class="flex flex-col gap-3">
+<!-- Card 1: Peanuts -->
+<label class="group relative cursor-pointer select-none">
+<input class="allergy-checkbox sr-only" type="checkbox"/>
+<div class="flex items-center justify-between p-3.5 pr-5 rounded-2xl border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft hover:shadow-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="icon-container h-12 w-12 rounded-xl bg-[#f0f4ec] dark:bg-[#343830] text-primary dark:text-primary-dark flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined">nutrition</span>
+</div>
+<span class="text-lg font-medium text-text-main dark:text-white">Peanuts</span>
+</div>
+<!-- Custom Checkbox Visual -->
+<div class="h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center overflow-hidden bg-transparent group-hover:border-primary transition-colors">
+<div class="check-indicator h-full w-full bg-primary flex items-center justify-center opacity-0 transform scale-50 transition-all duration-300">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+</div>
+</div>
+</label>
+<!-- Card 2: Tree Nuts -->
+<label class="group relative cursor-pointer select-none">
+<input class="allergy-checkbox sr-only" type="checkbox"/>
+<div class="flex items-center justify-between p-3.5 pr-5 rounded-2xl border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft hover:shadow-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="icon-container h-12 w-12 rounded-xl bg-[#f0f4ec] dark:bg-[#343830] text-primary dark:text-primary-dark flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined">forest</span>
+</div>
+<span class="text-lg font-medium text-text-main dark:text-white">Tree Nuts</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center overflow-hidden bg-transparent group-hover:border-primary transition-colors">
+<div class="check-indicator h-full w-full bg-primary flex items-center justify-center opacity-0 transform scale-50 transition-all duration-300">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+</div>
+</div>
+</label>
+<!-- Card 3: Shellfish -->
+<label class="group relative cursor-pointer select-none">
+<input class="allergy-checkbox sr-only" type="checkbox"/>
+<div class="flex items-center justify-between p-3.5 pr-5 rounded-2xl border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft hover:shadow-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="icon-container h-12 w-12 rounded-xl bg-[#f0f4ec] dark:bg-[#343830] text-primary dark:text-primary-dark flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined">set_meal</span>
+</div>
+<span class="text-lg font-medium text-text-main dark:text-white">Shellfish</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center overflow-hidden bg-transparent group-hover:border-primary transition-colors">
+<div class="check-indicator h-full w-full bg-primary flex items-center justify-center opacity-0 transform scale-50 transition-all duration-300">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+</div>
+</div>
+</label>
+<!-- Card 4: Soy -->
+<label class="group relative cursor-pointer select-none">
+<input class="allergy-checkbox sr-only" type="checkbox"/>
+<div class="flex items-center justify-between p-3.5 pr-5 rounded-2xl border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft hover:shadow-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="icon-container h-12 w-12 rounded-xl bg-[#f0f4ec] dark:bg-[#343830] text-primary dark:text-primary-dark flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined">eco</span>
+</div>
+<span class="text-lg font-medium text-text-main dark:text-white">Soy</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center overflow-hidden bg-transparent group-hover:border-primary transition-colors">
+<div class="check-indicator h-full w-full bg-primary flex items-center justify-center opacity-0 transform scale-50 transition-all duration-300">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+</div>
+</div>
+</label>
+<!-- Card 5: Eggs -->
+<label class="group relative cursor-pointer select-none">
+<input class="allergy-checkbox sr-only" type="checkbox"/>
+<div class="flex items-center justify-between p-3.5 pr-5 rounded-2xl border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft hover:shadow-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="icon-container h-12 w-12 rounded-xl bg-[#f0f4ec] dark:bg-[#343830] text-primary dark:text-primary-dark flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined">egg</span>
+</div>
+<span class="text-lg font-medium text-text-main dark:text-white">Eggs</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center overflow-hidden bg-transparent group-hover:border-primary transition-colors">
+<div class="check-indicator h-full w-full bg-primary flex items-center justify-center opacity-0 transform scale-50 transition-all duration-300">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+</div>
+</div>
+</label>
+<!-- Card 6: Milk -->
+<label class="group relative cursor-pointer select-none">
+<input class="allergy-checkbox sr-only" type="checkbox"/>
+<div class="flex items-center justify-between p-3.5 pr-5 rounded-2xl border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft hover:shadow-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="icon-container h-12 w-12 rounded-xl bg-[#f0f4ec] dark:bg-[#343830] text-primary dark:text-primary-dark flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined">water_drop</span>
+</div>
+<span class="text-lg font-medium text-text-main dark:text-white">Milk</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center overflow-hidden bg-transparent group-hover:border-primary transition-colors">
+<div class="check-indicator h-full w-full bg-primary flex items-center justify-center opacity-0 transform scale-50 transition-all duration-300">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+</div>
+</div>
+</label>
+<!-- Card 7: Gluten -->
+<label class="group relative cursor-pointer select-none">
+<input class="allergy-checkbox sr-only" type="checkbox"/>
+<div class="flex items-center justify-between p-3.5 pr-5 rounded-2xl border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft hover:shadow-md transition-all duration-300">
+<div class="flex items-center gap-4">
+<div class="icon-container h-12 w-12 rounded-xl bg-[#f0f4ec] dark:bg-[#343830] text-primary dark:text-primary-dark flex items-center justify-center transition-colors duration-300">
+<span class="material-symbols-outlined">grass</span>
+</div>
+<span class="text-lg font-medium text-text-main dark:text-white">Gluten</span>
+</div>
+<div class="h-6 w-6 rounded-full border-2 border-gray-300 dark:border-gray-600 flex items-center justify-center overflow-hidden bg-transparent group-hover:border-primary transition-colors">
+<div class="check-indicator h-full w-full bg-primary flex items-center justify-center opacity-0 transform scale-50 transition-all duration-300">
+<span class="material-symbols-outlined text-white text-[16px] font-bold">check</span>
+</div>
+</div>
+</div>
+</label>
+</div>
+<!-- Custom Input Field -->
+<div class="mt-8">
+<label class="flex flex-col flex-1">
+<p class="text-text-main dark:text-white text-base font-semibold leading-normal pb-3 pl-1">Other allergies</p>
+<div class="relative group/input">
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-2xl text-text-main dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary border border-transparent bg-surface-light dark:bg-surface-dark shadow-soft placeholder:text-text-secondary h-16 px-5 text-base font-normal leading-normal transition-all duration-200" placeholder="e.g., Sesame, Strawberries" value=""/>
+<div class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none group-focus-within/input:text-primary transition-colors">
+<span class="material-symbols-outlined">edit</span>
+</div>
+</div>
+<p class="text-xs text-text-secondary mt-2 pl-1">Separate multiple allergies with commas</p>
+</label>
+</div>
+</main>
+<!-- Sticky Footer CTA -->
+<div class="fixed bottom-0 left-0 right-0 z-10 p-6 bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pointer-events-none h-32 flex flex-col justify-end">
+<div class="pointer-events-auto max-w-lg mx-auto w-full">
+<button class="w-full bg-primary hover:bg-primary-dark text-white text-lg font-bold h-14 rounded-full shadow-xl shadow-primary/25 transition-all active:scale-[0.98] flex items-center justify-center gap-2 group/btn">
+                Next
+                <span class="material-symbols-outlined group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</body></html>

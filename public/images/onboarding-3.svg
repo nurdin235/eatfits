@@ -1,0 +1,8 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+  <rect rx="64" width="100%" height="100%" fill="#fff8f0" />
+  <g transform="translate(140,140)">
+    <path d="M80 320 h360 a20 20 0 0 1 20 20 v60 a20 20 0 0 1 -20 20 h-360 a20 20 0 0 1 -20 -20 v-60 a20 20 0 0 1 20 -20 z" fill="#fbe6cf" />
+    <circle cx="520" cy="220" r="64" fill="#8fb76c" />
+    <rect x="120" y="440" width="420" height="130" rx="16" fill="#f0f0f0" />
+  </g>
+</svg>
