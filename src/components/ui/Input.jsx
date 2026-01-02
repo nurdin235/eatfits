@@ -16,7 +16,7 @@ export default function Input({
 
       <input
         className={clsx(
-          'form-input flex w-full rounded-xl text-gray-900 dark:text-white border-gray-200 dark:border-gray-700 bg-surface-light dark:bg-surface-dark focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-gray-400 dark:placeholder:text-gray-600 px-4 pr-12 text-base transition-all shadow-sm',
+          'form-input flex w-full rounded-xl text-foreground dark:text-white border-dark/10 dark:border-dark/20 bg-surface-light dark:bg-surface-dark focus:border-primary focus:ring-1 focus:ring-primary h-14 placeholder:text-primary/50 dark:placeholder:text-primary/50 px-4 pr-12 text-base transition-all shadow-sm',
           error ? 'border-cta focus:ring-1 focus:ring-cta' : '',
           className
         )}

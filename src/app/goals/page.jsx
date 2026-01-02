@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { primaryGoals, budgetTiers } from "@/data/personalizationData";
 
-export default function PersonalizationStep() {
+export default function GoalsPage() {
   const router = useRouter();
   const [selectedGoals, setSelectedGoals] = useState(["weight"]);
   const [selectedBudget, setSelectedBudget] = useState("medium");
@@ -26,14 +26,14 @@ export default function PersonalizationStep() {
           >
             <span className="material-symbols-outlined text-2xl text-foreground dark:text-white">arrow_back</span>
           </button>
-          <div className="text-sm font-semibold text-primary/60 dark:text-primary/60">Step 2 of 4</div>
+          <div className="text-sm font-semibold text-primary/60 dark:text-primary/60">Step 2 of 6</div>
           <div className="w-10"></div>
         </div>
 
-        {/* ProgressBar - 50% for Step 2 */}
+        {/* ProgressBar - 33% for Step 2 */}
         <div className="progress-container">
           <div className="progress-track">
-            <div className="progress-fill" style={{ width: "50%" }}></div>
+            <div className="progress-fill" style={{ width: "33%" }}></div>
           </div>
         </div>
       </div>
@@ -125,10 +125,10 @@ export default function PersonalizationStep() {
       </div>
 
       {/* Sticky Footer CTA */}
-      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pt-8 pb-6 px-4 z-10">
+      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pt-8 pb-8 px-4 z-10">
         <button 
-          onClick={() => router.push("/onboarding/step-3")}
-          className="btn-primary shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform"
+          onClick={() => router.push("/diets")}
+          className="btn-primary shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform w-full"
         >
           Next Step
         </button>
@@ -136,3 +136,4 @@ export default function PersonalizationStep() {
     </div>
   );
 }
+

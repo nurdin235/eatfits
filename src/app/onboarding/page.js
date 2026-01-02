@@ -7,7 +7,7 @@ export default function OnboardingPage() {
       <div className="w-full max-w-md">
         <div className="flex items-center justify-between mb-4">
           <button className="text-xl">←</button>
-          <div className="text-sm text-[#6b7280]">Step 1 of 4</div>
+          <div className="text-sm text-primary/60">Step 1 of 4</div>
         </div>
 
         <OnboardingCarousel interval={2500} />

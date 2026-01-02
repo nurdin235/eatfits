@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { onboardingSlides } from "@/personalizationData.js/onboardingData";
+import { onboardingSlides } from "@/data/personalizationData";
 
 export default function WelcomeCarousel() {
   const [index, setIndex] = useState(0);

@@ -2,12 +2,12 @@
 
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import { dietPreferences, allergies } from "@/data/personalizationData";
+import { allergies } from "@/data/personalizationData";
 
-export default function Step3Diet() {
+export default function AllergiesPage() {
   const router = useRouter();
-  const [selectedDiet, setSelectedDiet] = useState("omnivore");
   const [selectedAllergies, setSelectedAllergies] = useState([]);
+  const [otherAllergies, setOtherAllergies] = useState("");
 
   const toggleAllergy = (id) => {
     setSelectedAllergies((prev) => (prev.includes(id) ? prev.filter((a) => a !== id) : [...prev, id]));
@@ -24,40 +24,22 @@ export default function Step3Diet() {
           >
             <span className="material-symbols-outlined text-2xl text-foreground dark:text-white">arrow_back</span>
           </button>
-          <div className="text-sm font-semibold text-primary/60 dark:text-primary/60">Step 3 of 4</div>
+          <div className="text-sm font-semibold text-primary/60 dark:text-primary/60">Step 4 of 6</div>
           <div className="w-10"></div>
         </div>
 
         <div className="progress-container">
           <div className="progress-track">
-            <div className="progress-fill" style={{ width: "75%" }}></div>
+            <div className="progress-fill" style={{ width: "67%" }}></div>
           </div>
         </div>
       </div>
 
       <div className="flex-1 overflow-y-auto no-scrollbar pb-32">
         <div className="px-4 pt-4 pb-2">
-          <h1 className="text-dark dark:text-white tracking-tight text-[28px] font-bold leading-tight">Tell us what you eat.</h1>
-          <p className="text-primary/70 dark:text-primary/70 text-base mt-2">Choose your diet preference and any allergies so we can tailor meals.</p>
+          <h1 className="text-dark dark:text-white tracking-tight text-[28px] font-bold leading-tight">Do you have any food allergies?</h1>
+          <p className="text-primary/70 dark:text-primary/70 text-base mt-2">We will filter recipes to ensure your meals are safe and tailored to your needs.</p>
         </div>
-
-        <section className="px-4 mt-6">
-          <h2 className="text-dark dark:text-white text-lg font-bold mb-4">Diet preference</h2>
-          <div className="flex gap-3 flex-wrap">
-            {dietPreferences.map((d) => (
-              <button
-                key={d.id}
-                type="button"
-                onClick={() => setSelectedDiet(d.id)}
-                className={`px-4 py-2 rounded-full border transition-all shadow-sm onboard-card ${
-                  selectedDiet === d.id ? "border-primary bg-primary/10 text-primary" : "border-transparent bg-surface-light text-foreground"
-                }`}
-              >
-                {d.label}
-              </button>
-            ))}
-          </div>
-        </section>
 
         <section className="px-4 mt-8">
           <h2 className="text-dark dark:text-white text-lg font-bold mb-4">Allergies</h2>
@@ -79,13 +61,28 @@ export default function Step3Diet() {
             })}
           </div>
         </section>
+
+        <section className="px-4 mt-8 mb-4">
+          <h2 className="text-dark dark:text-white text-lg font-bold mb-4">Other allergies</h2>
+          <div className="input-group">
+            <input
+              type="text"
+              className="form-input"
+              placeholder="e.g., Sesame, Strawberries"
+              value={otherAllergies}
+              onChange={(e) => setOtherAllergies(e.target.value)}
+            />
+          </div>
+          <p className="text-primary/60 text-xs mt-2 ml-1">Separate multiple allergies with commas</p>
+        </section>
       </div>
 
-      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pt-8 pb-6 px-4 z-10">
-        <button onClick={() => router.push("/onboarding/step-4")} className="btn-primary shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform">
+      <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-background-light via-background-light to-transparent dark:from-background-dark dark:via-background-dark pt-8 pb-8 px-4 z-10">
+        <button onClick={() => router.push("/planetary")} className="btn-primary shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform w-full">
           Next Step
         </button>
       </div>
     </div>
   );
 }
+

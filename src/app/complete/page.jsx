@@ -3,7 +3,7 @@
 import React from "react";
 import { useRouter } from "next/navigation";
 
-export default function Step4Complete() {
+export default function CompletePage() {
   const router = useRouter();
 
   return (
@@ -17,7 +17,7 @@ export default function Step4Complete() {
           >
             <span className="material-symbols-outlined text-2xl text-foreground dark:text-white">arrow_back</span>
           </button>
-          <div className="text-sm font-semibold text-primary/60 dark:text-primary/60">Step 4 of 4</div>
+          <div className="text-sm font-semibold text-primary/60 dark:text-primary/60">Step 6 of 6</div>
           <div className="w-10"></div>
         </div>
 
@@ -28,7 +28,7 @@ export default function Step4Complete() {
         </div>
       </div>
 
-      <div className="flex-1 overflow-y-auto no-scrollbar pb-32">
+      <div className="flex-1 overflow-y-auto no-scrollbar pb-24">
         <div className="px-4 pt-8 pb-2 text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-primary/10 dark:bg-primary/20 mb-6">
             <span className="material-symbols-outlined text-4xl text-primary">check_circle</span>
@@ -37,7 +37,7 @@ export default function Step4Complete() {
             You're all set!
           </h1>
           <p className="text-primary/70 dark:text-primary/70 text-base mt-3 max-w-xl mx-auto">
-            We've picked meal plans and preferences for you — you can review or start exploring EatFit now.
+            Your personalized meal plan is ready. We've curated recipes that match your goals and preferences.
           </p>
         </div>
 
@@ -45,13 +45,13 @@ export default function Step4Complete() {
           <div className="grid gap-3">
             <button
               onClick={() => router.push("/")}
-              className="btn-primary"
+              className="btn-primary shadow-lg shadow-primary/30 active:scale-[0.98] transition-transform"
             >
-              Open EatFit
+              Go to Dashboard
             </button>
             <button
-              onClick={() => router.push("/onboarding/step-3")}
-              className="btn btn-primary btn-cta bg-surface-light text-dark"
+              onClick={() => router.push("/goals")}
+              className="btn bg-surface-light text-foreground border border-dark/10 hover:bg-primary/5 active:scale-[0.98] transition-transform"
               aria-label="Review preferences"
             >
               Review preferences
@@ -62,3 +62,4 @@ export default function Step4Complete() {
     </div>
   );
 }
+
